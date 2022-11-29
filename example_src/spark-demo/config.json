@@ -1,0 +1,10 @@
+{
+    "srcPath": "data",
+    "destPath": "data/output",
+    "files": 
+        [
+        "/fileA_sample.csv",
+        "/fileB_sample.csv"
+        ],
+    "key": "`임시일련번호`"
+}
