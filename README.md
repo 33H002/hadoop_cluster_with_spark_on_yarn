@@ -2,7 +2,7 @@
 
 ### MapReduce 및 Spark 기반 고속 가명처리, 결합 연산 데모 (공개용)
 
-Docker multi-nodes Hadoop cluster with Spark 3.3.1 on Yarn. 
+Docker multi-nodes Hadoop cluster with Spark 2.4.1 on Yarn. 
 
 ## Usage 
 ### Build 

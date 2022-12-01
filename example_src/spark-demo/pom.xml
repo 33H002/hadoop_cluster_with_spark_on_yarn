@@ -2,17 +2,17 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
-    <name>spark-demo</name>
-    <artifactId>spark-demo</artifactId>
+    <name>demo</name>
+    <artifactId>demo</artifactId>
     <groupId>iitp</groupId>
     <version>1.0</version>
 
-    <description>An example Java 11 project using Maven and JUnit 5.x</description>
+    <description>An example Java 8 project using Maven and JUnit 5.x</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <main.class>iitp.spark-demo.App</main.class>
-        <java.version>11</java.version>
+        <main.class>iitp.demo.App</main.class>
+        <java.version>8</java.version>
         <junit.jupiter.version>5.4.2</junit.jupiter.version>
         <maven.compiler.plugin.version>3.8.0</maven.compiler.plugin.version>
         <maven.jar.plugin.version>3.1.1</maven.jar.plugin.version>
@@ -31,13 +31,13 @@
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_2.12</artifactId>
-            <version>3.3.1</version>
+            <version>2.4.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_2.12</artifactId>
-            <version>3.3.1</version>
+            <version>2.4.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>

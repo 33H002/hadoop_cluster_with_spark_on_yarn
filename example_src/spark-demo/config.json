@@ -1,6 +1,6 @@
 {
     "srcPath": "data",
-    "destPath": "data/output",
+    "destPath": "output",
     "files": 
         [
         "/fileA_sample.csv",
