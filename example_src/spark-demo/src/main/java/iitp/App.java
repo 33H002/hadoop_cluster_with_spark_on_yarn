@@ -12,9 +12,6 @@ import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 
-import org.apache.spark.SparkConf;
-import org.apache.spark.api.java.JavaSparkContext;
-
 // json
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -23,13 +20,6 @@ import com.google.gson.JsonParser;
 
 public class App 
 {
-    SparkConf conf = new SparkConf().setMaster("yarn")
-                                    .setAppName("spark")
-                                    .set("spark.submit.deployMode", "client")
-                                    ;
-
-    JavaSparkContext sc = new JavaSparkContext(conf);
-
     /**
      * @param args
      * @throws FileNotFoundException
@@ -40,6 +30,8 @@ public class App
         //spark builder name build 
         SparkSession spark = SparkSession.builder()
                                          .appName("Java Spark")
+                                         .config("spark.sql.files.maxPartitionBytes", 948524500) // (10.6GB / 12)
+                                         .config("spark.sql.shuffle.partitions", 12)
                                          .getOrCreate();
         /* read Config */
         final Dataset<Row> config = spark.read().option("multiline","true").json(args[0]); // config.json path
